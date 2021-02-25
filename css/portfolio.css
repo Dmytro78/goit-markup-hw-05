@@ -1,0 +1,93 @@
+.header .container {
+  border-bottom: 1px solid #ececec;
+}
+
+ .portfolio{
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin: 0 auto;
+}
+
+
+.btn {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+  margin-left: 0px;
+  margin-top: 0px;
+  text-align: center;
+  border-style: hidden;
+  border-radius: 4px;
+}
+
+.post-itemh {
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+  margin: 0px;
+  margin-bottom: 4px;
+}
+
+.post-itemps,
+.post-itempd,
+.post-itempm,
+.post-itempa {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: var(--main-gray);
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.btns,
+.post {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.btns {
+  margin-bottom: 50px;
+}
+
+.btns li {
+  margin-left: 8px;
+}
+
+.btns li:first-child {
+  margin-left: 0px;
+}
+
+.post {
+  flex-wrap: wrap;
+  align-items: center;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.post li {
+  flex-basis: calc(100% / 3 - 30px);
+}
+
+.post-item {
+  margin-top: 30px;
+  margin-left: 30px;
+  outline: 1px solid #ececec;
+  cursor: pointer;
+}
+
+.post-item:hover,
+.post-item:focus {
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+  0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+}
+
+.name-card {
+  padding: 20px 24px;
+}
