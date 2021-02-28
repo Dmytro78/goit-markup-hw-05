@@ -323,10 +323,16 @@ li {
 }
 
 .works-images {
-  position: relative;
   align-items: center;
   justify-content: space-between;
   padding-left: 0px;
+}
+
+.works-thumbs {
+  position: relative;
+  display: block;
+  width: 370px;
+
 }
 
 .works-images .box {
@@ -682,6 +688,50 @@ li {
   margin: -30px 0px 0px -30px;
 }
 
+.thumbs {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumbs::before {
+  display: inline-block;
+  content: '';
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-color);
+  transform: translateY(100%);
+  
+  transition-property: transform; 
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+
+.thumbs-text {
+  position: absolute;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+ 
+
+  padding: 63px 24px;
+  margin: 0px;
+
+  top: 0;
+  left: 0;
+  
+  color: var(--text-color); 
+  
+  opacity: 0;
+
+  transition-property: opacity; 
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+
 .portfolio .post-item {
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
@@ -700,6 +750,18 @@ li {
   0px 4px 4px 0px rgba(0, 0, 0, 0.06);
   0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
+
+.portfolio .post-item:hover .thumbs::before,
+.portfolio .post-item:focus .thumbs::before{
+  transform: translateY(0);
+}
+
+.portfolio .post-item:hover .thumbs-text,
+.portfolio .post-item:focus .thumbs-text {
+  opacity: 1;
+}
+
+
 
 .portfolio .name-cards {
   padding: 20px 24px;
