@@ -10,6 +10,7 @@
   --network-color: #afb1b8;
   --gradient-color: rgba(47, 48, 58, 0.4);
   --border-header: #ececec;
+  --cubic-bezier: cubic-bezier (0.4, 0, 0.2, 1); 
 }
 
 body {
@@ -63,6 +64,12 @@ li {
 
 .btn {
   cursor: pointer;
+  
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+
+  
 }
 
 .btn:hover {
@@ -115,10 +122,16 @@ li {
 }
 
 .links-item {
-  color: var(--main-text-color);
-  text-align: center;
   display: block;
+  text-align: center;
+
   padding: 32px 0;
+
+  color: var(--main-text-color);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .links-menu {
@@ -129,21 +142,19 @@ li {
   color: var(--button-color);
 }
 
-.links-item:hover,
-.links-item:focus,
-.contakts-item:hover,
-.contakts-item:focus {
-  color: var(--button-color);
-}
-
 .contakts-item {
-  color: var(--main-gray);
-  padding: 0px;
   display: flex;
   align-items: center;
-
+  
+  padding: 0px;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  color: var(--main-gray);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .contakts-menu:last-child {
@@ -156,6 +167,14 @@ li {
   display: inline-block;
   align-items: center;
 }
+
+.links-item:hover,
+.links-item:focus,
+.contakts-item:hover,
+.contakts-item:focus {
+  color: var(--button-color);
+}
+
 
 /*M A I N*/
 
@@ -190,7 +209,7 @@ li {
   text-transform: uppercase;
 }
 
-.btn-hero {
+.hero .btn {
   padding: 10px 32px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -359,12 +378,18 @@ li {
 }
 
 .networks-item {
-  width: 44px;
-  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
   color: var(--network-color);
+
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .networks-item:hover,
@@ -389,6 +414,8 @@ li {
 /*clients*/
 
 .clients-heading {
+  text-align: center;
+
   margin-top: 0px;
   margin-bottom: 50px;
   margin-right: auto;
@@ -398,7 +425,7 @@ li {
   line-height: 42px;
   letter-spacing: 0.03em;
 
-  text-align: center;
+ 
 }
 
 .clients {
@@ -423,6 +450,10 @@ li {
   border: 1px solid var(--network-color);
   box-sizing: border-box;
   fill: var(--network-color);
+
+  transition-property: fill, border;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .clients-item:hover,
@@ -522,13 +553,19 @@ li {
 }
 
 .footer-network-item {
-  width: 44px;
-  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  width: 44px;
+  height: 44px;
+  
   background-color: var(--gray-op10);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .footer-network-item:hover,
@@ -607,6 +644,10 @@ li {
   margin-left: 30px;
   outline: 1px solid #ececec;
   cursor: pointer;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
 }
 
 .portfolio .post-item:hover,
