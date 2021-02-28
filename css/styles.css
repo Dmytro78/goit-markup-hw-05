@@ -123,6 +123,8 @@ li {
 }
 
 .links-item {
+  position: relative;
+
   display: block;
   text-align: center;
 
@@ -139,7 +141,7 @@ li {
   margin-left: 50px;
 }
 
-.links .links-item.carrnet {
+.links-item.carrnet {
   color: var(--button-color);
 }
 
@@ -174,6 +176,21 @@ li {
 .contakts-item:hover,
 .contakts-item:focus {
   color: var(--button-color);
+}
+
+.links-item.carrnet::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--button-color);
+  border-radius: 2px;
+  margin-bottom: -1px;
 }
 
 
