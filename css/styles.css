@@ -801,11 +801,12 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
+
   background-color: var(--font-modal);
 
   opacity: 1;
   
-  transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
@@ -816,10 +817,6 @@ li {
   pointer-events: none;
 }
 
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%,-50%) scaleY(0); 
-}
 
 .modal {
   height: 581px;
@@ -836,21 +833,34 @@ li {
   border-radius: 4px;
 
   transform: translate(-50%,-50%) scaleY(1);
-   
+     
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: var(--cubic-bezier);
 }
 
+.is-hidden .modal {
+  transform: translate(-50%,-50%) scaleY(0);  
+}
+
 .button-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   position: absolute;
   top: 8px;
-  right: 8px; 
+  right: 8px;
+  
+  width: 36px;
+  height: 36px;
 
-  width: 30px;
-  height: 30px;
+  border-radius: 50%;
+  border: rgba(0, 0, 0, 0.1);
+  background-color: var(--text-color);
+    
 }
 
 .modal-close {
-  fill: var(--text-color);
-}
+ fill: var(--text-color);
+
