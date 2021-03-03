@@ -762,13 +762,31 @@ li {
   0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio .post-item:hover .thumbs::before,
-.portfolio .post-item:focus .thumbs::before{
-  transform: translateY(0);
+
+.post-item-link {
+  cursor: pointer;
+  text-decoration: none;
+  transition-property: box-shadow transform;
+  transition-duration: 250ms;
+  transition-timing-function: var(--cubic-bezier);
+}
+
+
+.post-item-link:hover .thumbs::before,
+.post-item-link:focus .thumbs::before {
+   transform: translateY(0);
+  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+  0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  0px 1px 1px 0px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio .post-item:hover .thumbs-text,
 .portfolio .post-item:focus .thumbs-text {
+  opacity: 1;
+}
+
+.post-item-link:hover .thumbs-text,
+.post-item-link:focus .thumbs-text {
   opacity: 1;
 }
 
@@ -875,7 +893,7 @@ li {
   fill: var(--main-text-color);
 }
 
-.modal-close:hover,
-.modal-close:focus {
-  color: var(--button-color);
+.button-close:hover .modal-close,
+.button-close:focus .modal-close {
+  fill: var(--button-color);
 }
