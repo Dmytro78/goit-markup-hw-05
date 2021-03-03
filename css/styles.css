@@ -856,15 +856,26 @@ li {
   top: 8px;
   right: 8px;
   
-  width: 30px;
+  width:30px;
   height: 30px;
 
+  padding: 0px;
+  margin: 0px;
+
   border-radius: 50%;
-  border: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.1);
   background-color: var(--text-color);
-    
 }
 
-.modal-close {
- fill: var(--text-color);
 
+.modal-close {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  fill: var(--main-text-color);
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: var(--button-color);
+}
